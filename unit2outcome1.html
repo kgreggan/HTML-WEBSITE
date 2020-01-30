@@ -1,17 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}        
+
+h1 {
+    text-shadow: 0 0 3px red;
+} 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+    </style>  
+
     <meta charset="UTF-8">
     <title>Karl's first website</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
     <html class="unit2-bg">
     <div>
     <p class = "menu3">    
-        <a href="index.html">About Me</a>  |
-        <a href="unit1outcome1.html">Unit1</a>  |
-        <a href="unit2outcome1.html">Unit2</a>  |
+        <ul>   
+            <li><a href="index.html">Home</a></li>
+            <li><a href="unit1outcome1.html">Unit1</a></li>
+            <li><a href="unit2outcome1.html">Unit2</a></ul>
+            </ul> 
     </p> 
     </div><div>
         <h1 class="makecenter">Unit 2</h1>
@@ -31,7 +109,70 @@
         </a>
         <h2>1.1 Describing the content and layout for each page</h2>
         <p>
-            TBC.   
+            <b><u>Page 1.  Home / About You</u></b>
+            <br>
+            <br>
+            -  Navigation bar with links to each page
+            <br>
+            -  Main header (with text-shadow effect)
+            <br>
+            -  A menu with shortcuts that take the user to specific content further down the page
+            <br>
+            -  Section headers
+            <br>
+            -  Paragraphs
+            <br>
+            -  Images (one image is ‘clickable’ and takes the user to a specific website in a separate tab)
+            <br>
+            - Added a "scroll back to top" button for usability
+            <br>
+            -  Background and font colours specific to this page only
+            <br>
+            -  Font selected was Titillium Web
+            <br>
+            <br>
+            <b><u>Page 2.  Unit 1</u></b>
+            <br>
+            <br>
+            -  Navigation bar with links to each page
+            <br>
+            -  Main header (with text-shadow effect)
+            <br>
+            -  A menu with shortcuts that take the user to specific content further down the page
+            <br>
+            -  Section headers (that represent the course questions)
+            <br>
+            -  Paragraphs (that represent my answers to the course questions)
+            <br>
+            - Links to external sites where I sourced some of my answers
+            <br>
+            - Added a "scroll back to top" button for usability
+            <br>
+            -  Background and font colours specific to this page only
+            <br>
+            -  Font selected was Titillium Web
+            <br>
+            <br>
+            <b><u>Page 3.  Unit 2</u></b>
+            <br>
+            <br>
+            -  Navigation bar with links to each page
+            <br>
+            -  Main header (with text-shadow effect)
+            <br>
+            -  A menu with shortcuts that take the user to specific content further down the page
+            <br>
+            -  Section headers (that represent the course questions)
+            <br>
+            -  Paragraphs (that represent my answers to the course questions)
+            <br>
+            - Links to external sites where I sourced some of my answers
+            <br>
+            - Added a "scroll back to top" button for usability
+            <br>
+            -  Background and font colours specific to this page only
+            <br>
+            -  Font selected was Titillium Web   
         </div><div>
         <a id="1.5">
         </a>
@@ -54,33 +195,34 @@
             The Companies Act 2006 requires you to disclose certain information about the identity of your company on your website. 
             <br>
             <br>
-            The right of users to grant consent for the use of their data.
+            <b>The right of users to grant consent for the use of their data.</b>
             <br>
             GDPR regulations came into effect in May 2018.  This legislation relates to the rights of individuals to understand how their personal data is being processed.
             <br>
             <br>
-            Your company policies and procedures.
+            <b>Your company policies and procedures.</b>
             <br>
             There are a number of standard pages you have to include on your website.  A privacy policy that details what personal information your business collects, and how you use that information.  A cookie disclosure explains how your business uses cookies on your website. This can be part of your privacy policy.  A disclaimer stipulating how users can use the information on your website, and what liability (if any) your business accepts. Again, this can be part of your privacy policy.
             <br>
             <br>
-            Consumer protection.
+            <b>Consumer protection.</b>
             <br>
             If your company is selling online, then your business will need to comply with a range of legislation that includes the online and distance selling regulations as well as electronic commerce regulations and the consumer rights act.
             <br>
             <br>
-            Accessibility.
+            <b>Accessibility.</b>
             <br>
             Your website must be accessible to everyone who needs it.  If it isn’t, you may be in breach of the Equality Act 2010.
             <br>
             <br>
-            Cyber security and protecting personal data.
+            <b>Cyber security and protecting personal data.</b>
             <br>
             The Information Commissioner’s Office has published a set of technical security processes that are considered to represent appropriate measures under the GDPR.
             <br>
-            <br>
-            https://www.hallaminternet.com/internet-marketing-and-the-law-legal-issues-affecting-you-and-your-website/
-        <a id="1.6">
+            <p>
+                <a href="https://www.hallaminternet.com/internet-marketing-and-the-law-legal-issues-affecting-you-and-your-website/" target="_blank">Ref: hallam internet</a>
+            </p>
+            <a id="1.6">
         </a>    
         <h2>1.6 Describing access issues that need taking into account - describe issues that people with disabilities may face when using webpages and how we can overcome them.</h2>
         <p>
@@ -99,9 +241,9 @@
             Additionally, you can make your website more accessible by using headings correctly to organize the structure of your content, including proper alt text for images, giving your links unique and descriptive names, using colour with care, designing your forms for accessibility, using tables for tabular data (not for layout), ensuring that all content can be accessed with the keyboard alone in a logical way, and making dynamic content accessible. [2]
             <br>
             <br>
-            [1] https://www.w3.org/WAI/fundamentals/accessibility-intro/#making]
+            <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank">[1] www.w3.org</a>
             <br>
-            [2] https://webaccess.berkeley.edu/resources/tips/web-accessibility]
+            <a href="https://webaccess.berkeley.edu/resources/tips/web-accessibility" target="_blank">[2] berkeley.edu</a>
         </p>  
         <a id="1.7">
         </a>    
@@ -114,21 +256,29 @@
             <br>
             <br>    
             Examples of the best image formats to use on websites are:
-            <h4 class = "underline italic">JPEG
-            </h4> 
+            <br>
+            <br>
+            <b><i>JPEGs</i></b>
+            <br>
             JPEG is the most popular choice when saving photographs as they are capable of containing over 16 million different colours. They are also a good choice for saving images with complex colour and shading.  JPEGs are probably the best file format for photographs on the web as the level of flexible compression when saving means they are capable of shrinking to a smaller file size and, therefore, they won’t have a negative effect on pagespeed.
-            <h4 class = "underline italic">PNG
-            </h4> 
+            <br>
+            <br>
+            <b><i>PNGs</i></b>
+            <br>
             PNGs can contain an unlimited amount of colours, meaning that they are not just suitable for images, but also graphics and text. PNGs also give you control over transparency, unlike JPEGs, which makes them pretty much perfect for logos. PNGs also use a lossless compression, meaning they don’t lose any information or quality.
-            <h4 class = "underline italic">GIF
-            </h4> 
+            <br>
+            <br>
+            <b><i>GIFs</i></b>
+            <br>
             GIF images tend to be much smaller file sizes compared to other formats and aren’t capable of containing millions of colours. GIFs also support transparency, which would make them suitable for small graphics and logos, and due to their small file size, this format is great for placing lots of small graphics such as icons and buttons on the same page.  As GIFs can hold both text and transparent backgrounds, they are perfect for creating banners that intend to hold text on top of colours or images. 
-            <h4 class = "underline italic">SVG
-            </h4>  
+            <br>
+            <br>
+            <b><i>SVGs</i></b>
+            <br>  
             SVGs are vector based formats, meaning they aren’t built using pixels like the other three formats we’ve looked at, instead they’re built using mathematical formulas. As SVGs are based on vectors, they aren’t the best choice when saving photographs, however, they are a good choice for drawings and line art.  With SVGs, you can create full resolution images that will look good on any screen size, zoom level or resolution, which makes these great for graphics that can be viewed on all devices such as desktop, tablets and mobile phones.
             <br>
-            <br> 
-            https://www.ballyhoo.co.uk/What-are-the-Best-File-Formats-for-Your-Websites-Images.html
+            <br>
+            <a href="https://www.ballyhoo.co.uk/What-are-the-Best-File-Formats-for-Your-Websites-Images.html" target="_blank">Ref: ballyhoo.co.uk</a>
     </p> 
 </div>     
 </body>

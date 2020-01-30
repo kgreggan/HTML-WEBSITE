@@ -1,17 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}          
+
+h1 {
+  text-shadow: 2px 2px white;
+}  
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
+}
+    </style>    
     <meta charset="UTF-8">
     <title>Karl's first website</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
     <html class="unit1-bg">
     <div>
     <p class = "menu2">    
-        <a href="index.html">About Me</a>  |
-        <a href="unit1outcome1.html">Unit1</a>  |
-        <a href="unit2outcome1.html">Unit2</a>  |
+        <ul>   
+            <li><a href="index.html">Home</a></li>
+            <li><a href="unit1outcome1.html">Unit1</a></li>
+            <li><a href="unit2outcome1.html">Unit2</a></ul>
+            </ul>  
     </p>     
     </div><div>
         <h1 class="makecenter">Unit 1</h1>
@@ -63,7 +138,7 @@
         <h2 class="italic">1.3 Plan and carry out tasks using IT – e.g. making your website. How will you plan it?
         </h2>
         <p>
-            Link to my Trello board - https://trello.com/b/qvwEsCym/kg-html-and-css-project
+            <a href="https://trello.com/b/qvwEsCym/kg-html-and-css-project" target="_blank">My Trello Board</a>
             <br>
             <br>
             First task is to set-up a Trello board for the project.  This will assist in the project management by allowing me to visual all required tasks, to update and track these tasks, and to prioritise and set deadlines for tasks, and to be able to quickly visual where the project is up to.
@@ -103,9 +178,9 @@
            Other things to consider could include recommendations from peer companies, online research, and experience using technology in the previous project.
            <br>
            <br>
-           [1] https://magora-systems.com/how-choose-technology-for-it-project/
+           <a href="https://magora-systems.com/how-choose-technology-for-it-project/" target="_blank">[1] magora-systems.com</a>
            <br>
-           [2] https://www.builtinchicago.org/blog/how-choose-right-technology-stack-your-software-development-project
+           <a href="https://www.builtinchicago.org/blog/how-choose-right-technology-stack-your-software-development-project" target="_blank">[2] builtinchicago.org</a>
         </p> 
         <h2>1.6 Describe and provide analysis on how your chosen technologies have helped you achieve your outcomes. – How has Trello helped you plan and how can git and GitHub help with your codes version control.
         </h2>
@@ -151,10 +226,10 @@
            <br>
            Finally, another very important consideration is the security of this personal data, ensuring your data security policy is compliant and sufficient to make the data secure. 
            <br>
-           <br> 
-           [1] https://www.wired.co.uk/article/what-is-gdpr-uk-eu-legislation-compliance-summary-fines-2018
            <br>
-           [2] https://www.cookiebot.com/en/gdpr-cookies/
+           <a href="https://www.wired.co.uk/article/what-is-gdpr-uk-eu-legislation-compliance-summary-fines-2018" target="_blank">[1] wired.co.uk</a>
+           <br>
+           <a href="https://www.cookiebot.com/en/gdpr-cookies/" target="_blank">[2] cookiebot.com</a>
            <br>
            <br> 
         </p> 
@@ -163,7 +238,7 @@
         <h2 class="h2diff">Unit 1, Outcome 2 (Review)
         <h2 class="italic">2.1 Review the ongoing use of IT tools and change approach as needed – in making your own website, are you happy with the tools you used? E.g. Visual Studio Code, Trello</h2>
         <p>
-            Visual Studio Code
+            <u>Visual Studio Code</u>
             <br>
             I was very happy with the use of this tool and found no requirement to look for an alternative. 
             <br>
@@ -173,7 +248,7 @@
             <br> 
             Immediately being able to view the results of any changes to my code was very helpful.
         </p><p>
-            Trello
+            <u>Trello</u>
             <br>
             I have found Trello very useful for my project management tasks. 
             <br>
@@ -182,7 +257,7 @@
             Changing or updating tasks was very easy.
         </p><p>
         <h2 class="italic">2.2 Describe whether the IT tools selected were appropriate E.g. Visual Studio Code, Trello</h2>
-            Visual Studio Code
+            <u>Visual Studio Code</u>
             <br>
             I thought VS Code was appropriate tool to use, especially for someone new to coding. 
             <br>
@@ -192,7 +267,7 @@
             <br> 
             For HTML & CSS I found it easy to work on both sets of code simultaneously, and the split screen function assisted with this.
             </p><p>
-            Trello
+            <u>Trello</u>
             <br>
             Trello is very easy to use.  For each project, your basic board can be set-up easily in a few minutes. 
             <br>
@@ -201,28 +276,40 @@
             For someone new to the tool it can be very easy to forget to update the board.  Using the deadline tool can help with this, however I found that over time I became more disciplined and updating the tasks/board as I went along.
         </p><p>
             <h2 class="italic">2.3 Assess the strengths and weaknesses of your final project – are you happy with your website? Why? Why not? You should review it on the website itself in the interests of openness. What would you change?</h2>
-            Strengths
-            <ul>
-                <li>Questions were researched well and answered fully</li>
-                <li>Got to grips with the tools (VS Code, Trello) quickly</li>
-                <li>Used Trello well to build a view of all of my tasks</li>
-                <li>Basic coding was solid</li>
-                <li>Different methods added to website early (Menu, shortcuts, linking different pages, Bold/Underlined/Italicised text)</li>
-                <li>Web pages were clear even before adding too much styling</li>
-                <li>Pleased with a first effort in the time given</li>
-            </ul>
-            Weaknesses
-            <ul>
-                <li>Maybe too much time spent on answering the questions, and making the answers too lengthy.  Subsequently took more time to add large amounts of text into the code</li>
-                <li>Often failed to update Trello as I went along</li>
-                <li>Website was basic.  I think too much time was spent on the questions part of the project</li>
-                <li>Not enough thought to what I wanted the website to be e.g. theme, specific styles</li>
-                <li>Time management in terms of not having as much time as I would have liked to try more things out on the website e.g. background images, video, animations, a bit more fun…</li>
-                <li>Throughout the project I could have had more interaction with my fellow students, either via Slack or in person to exchange ideas, discuss issues & solutions etc.</li>
-            </ul>
-            Are you happy with your website? 
+            <u>Strengths</u>
+                <br>
+                Questions were researched well and answered fully
+                <br>
+                Got to grips with the tools (VS Code, Trello) quickly
+                <br>
+                Used Trello well to build a view of all of my tasks
+                <br>
+                Basic coding was solid
+                <br>
+                Different methods added to website early (Menu, shortcuts, linking different pages, Bold/Underlined/Italicised text)
+                <br>
+                Web pages were clear even before adding too much styling
+                <br>
+                Pleased with a first effort in the time given
+                <br>
+                <br>
+            <u>Weaknesses</u>
             <br>
-            <br>
+                Maybe too much time spent on answering the questions, and making the answers too lengthy.  Subsequently took more time to add large amounts of text into the code
+                <br>
+                Often failed to update Trello as I went along.
+                <br>
+                Website was basic.  I think too much time was spent on the questions part of the project.
+                <br>
+                Not enough thought to what I wanted the website to be e.g. theme, specific styles.
+                <br>
+                Time management in terms of not having as much time as I would have liked to try more things out on the website e.g. background images, video, animations, a bit more fun…
+                <br>
+                Throughout the project I could have had more interaction with my fellow students, either via Slack or in person to exchange ideas, discuss issues & solutions etc.
+                <br>
+                <br>
+            <u>Are you happy with your website?</u> 
+               <br>
             I am happy with my website in terms of what I have produced given that I have had no prior knowledge or experience of building one.  I now have a ‘working’ website that I can build on.  I can also now take what I have learned on the course, build on this, and try to make a more relevant, personalised site e.g. a site for my limited company.
             <br>
             <br>
@@ -237,8 +324,16 @@
             <br>
         </p><p>
         <h2 class="italic">2.5 Review outcomes to make sure they match requirements and are fit for purpose</h2>
-            TBC
+            I have:
             <br>
+            <br>
+            - Prepared the appropriate content for my site.
+            <br>
+            - Selected and used the appropriate development techniques for clarity and good navigation.
+            <br>
+            - Selected and used the appropriate editing and formatting techniques to link information across pages.
+            <br>
+            - Ensured pages are error free and fit for purpose.
         </p> 
         </div><div>
         <a id="1.3"></a>
@@ -305,6 +400,23 @@
             Re-test any defect fixes.
             <br>
             Run regression tests (re-running tests to ensure that previously developed and tested software still performs after a change) where applicable e.g. following code deployments, defect re-tests.
+            <br>
+            <br>
+            Items I would test on the website include:
+            <br>
+            - Do all pages load and render correctly?
+            <br>
+            - Do all images load correctly?
+            <br>
+            - If you have a Navigation Bar, does it work?
+            <br>
+            - Do all your web links / URLs work?  Do they open in the same tab or a separate tab as expected?
+            <br>
+            - Do all shortcuts work?  Is the user taken to the correct place on the page?
+            <br>
+            - Do all drop-downs work?
+            <br>
+            - Spelling, Grammar, Punctuation
         </p>    
 </p>
 </body>
